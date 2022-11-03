@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+}
+
+header{
+    background-image: url("images/burger-background.jfif");
+    background-size: 50%;
+    width: 600px;
+    height: 200px;
+}
