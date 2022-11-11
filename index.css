@@ -1,10 +1,251 @@
 body {
     margin: 0;
+    font-family: "Smythe", cursive;
+    font-size: 1rem;
+    height: 100vh;
+    
 }
 
-header{
+/* ======== Typography ========= */
+
+h1, h2, h3, h4, p{
+    font-weight: 400;
+    margin: 0;
+}
+p{
+    color: #8b8b8b;
+    line-height: 1.6;
+}
+
+.item-info h4 {
+    font-weight: 400;
+}
+
+/* ========== Layout ===========*/
+
+/* ========== Items section ========== */
+
+main {
+    margin: 1em auto;
+    max-width: 700px;
+    padding: 0 2em;
+    padding-bottom: 2em;
+}
+
+.header{
     background-image: url("images/burger-background.jfif");
-    background-size: 50%;
-    width: 600px;
-    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    padding: 60px;
+    background-position: center right;
+    color: white;
+}
+
+.item-card{
+    border-bottom: 2px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25em 0;
+    align-items: flex-start;
+}
+
+.item-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.add-item-btn{
+    border-radius: 40px;
+    width: 45px;
+    height: 45px;
+    border-width: 1px;
+    /* 
+    
+    padding: 15px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    size: 32px;
+    background: none;
+    border:2px solid #8b8b8b; */
+}
+
+.cont{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.icon{
+    margin-right: 1em;
+    display: flex;
+    align-items: center;
+    transform: scale(1.5);
+    
+}
+
+.btn {
+    font-family: Verdana,  sans-serif;
+    background-color: white;
+    transition: 200ms;
+}
+
+.btn:hover,
+.btn:focus {
+    /* transform: scale(1.2); */
+    cursor: pointer;
+}
+
+.btn:active {
+    background-color: #404040;
+    color: #fff;
+}
+
+main h4 {
+    padding: 0.2em 0;
+}
+
+/* ========== Checkout ========== */
+
+.checkout-section {
+    display: none;
+}
+
+.order-title {
+    text-align: center;
+    margin-top: 1.2em;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.remove-btn {
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: white;
+    color: #8b8b8b;
+    margin-left: 0.2em;
+    padding: 0;
+}
+
+.order-info {
+    display: flex;
+}
+
+.total {
+    margin-top: 1em;
+    border-top: 2px solid black;
+    padding-top: 1em;
+}
+
+.complete-btn {
+    width: 100%;
+    margin-top: 1.5em;
+    padding: 1em 0;
+    background-color: #16DB99;
+    border: none;
+    color: white;
+}
+
+.complete-btn:hover,
+.complete-btn:focus {
+    background-color: #404040;
+    transform: none;
+    transition: 500ms;
+}
+
+
+/* ======== Modal Form ========= */
+
+.modal {
+    display: none;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 500px;
+    width: 500px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    filter: drop-shadow(5.18654px 5.18654px 255.437px rgba(0, 0, 0, 0.5));
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.form-title {
+    text-align: center;
+    margin: 1.5em;
+}
+
+form > * {
+    margin: 1em;
+    padding: 1em 0;
+    padding-left: 1em;
+}
+
+form button {
+    background-color: #16DB99;
+    border: none;
+    color: white;
+}
+
+form button:hover,
+form button:focus {
+    background-color: #404040;
+    transform: none;
+    transition: 100ms;
+    cursor: pointer;
+}
+
+
+/* ======== Message ======= */
+
+.payment-message {
+    display: none;
+    text-align: center;
+    font-size: 1.75rem;
+    background-color: #ECFDF5;
+    margin-top: 1em;
+    padding: 0.5em;
+}
+
+.payment-message p {
+    color:rgba(0, 0, 0, 0.6) ;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #16DB99;
+    width: 80px;
+    height: 80px;
+    margin: 100px auto;
+    top: 500px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
