@@ -171,8 +171,8 @@ main h4 {
     top: 0;
     bottom: 0;
     margin: auto;
-    height: 500px;
-    width: 500px;
+    height: 420px;
+    width: 400px;
     border-radius: 5px;
     background-color: #fff;
     color: black;
@@ -189,7 +189,7 @@ form {
 
 .form-title {
     text-align: center;
-    margin: 1.5em;
+    margin: 1em;
 }
 
 form > * {
